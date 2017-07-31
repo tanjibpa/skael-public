@@ -1,0 +1,40 @@
+<section class="login-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 left-side hidden-xs-down">
+        <h1>
+          Make intelligent B2B
+          procurement & operations
+          decisions in seconds.
+        </h1>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 right-side">
+        <div class="home-auth form-wrapper p-lg-5">
+          <h1 class="login-title">Sign In</h1>
+          <!--LOGIN FORM-->
+          <div class="account-wall">
+            <form class="form-auth" #f="ngForm" (ngSubmit)="f.form.valid && login(f)" novalidate>
+              <!--INPUT-->
+              <md-input-container class="w-100">
+                <input mdInput placeholder="Username" name="username" [(ngModel)]="user.username" autofocus>
+              </md-input-container>
+              <md-input-container class="w-100 mb-3">
+                <input mdInput placeholder="Password" type="password" name="password" [(ngModel)]="user.password">
+              </md-input-container>
+              <!--START ERROR MESSAGE-->
+              <div class="form-group has-danger" *ngIf="error.isError">
+                <div class="form-control-feedback">{{error.message}}</div>
+              </div>
+              <!--REMEMBER ME-->
+              <div class="form-group text-left">
+                <md-checkbox color="primary" name="rememberMe" [(ngModel)]="rememberMe">Remember me</md-checkbox>
+              </div>
+              <!--SUBMIT-->
+              <button md-raised-button color="primary" class="btn btn-lg btn-block" type="submit">Sign In</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,26 @@
+<md-card-title class="px-lg-5 pt-lg-5">Profile</md-card-title>
+<md-card-content class="px-lg-5">
+  <form #f="ngForm" (ngSubmit)="submit()">
+    <div class="row">
+      <md-input-container class="col">
+        <input mdInput placeholder="First Name" name="firstName" [(ngModel)]="profile.firstName" required>
+      </md-input-container>
+      <md-input-container class="col">
+        <input mdInput placeholder="Last Name" name="lastName" [(ngModel)]="profile.lastName" required>
+      </md-input-container>
+    </div>
+    <div class="row">
+      <md-input-container class="col">
+        <input mdInput placeholder="Email Address" type="email" name="email" [(ngModel)]="profile.email" email required>
+      </md-input-container>
+    </div>
+    <div class="row">
+      <md-input-container class="col">
+        <input mdInput placeholder="New password" type="password" name="newPassword" [(ngModel)]="profile.newPassword" password>
+      </md-input-container>
+    </div>
+    <div class="row">
+      <button type="submit" color="primary" md-raised-button class="ml-auto mr-3 mt-5">Save</button>
+    </div>
+  </form>
+</md-card-content>

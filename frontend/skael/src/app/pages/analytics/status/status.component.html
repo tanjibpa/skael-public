@@ -1,0 +1,113 @@
+<div class="container-fluid status-section py-5">
+  <div class="row mx-lg-5 hidden-md-down">
+    <div class="col-md-3 col-sm-12 col-12 align-self-center">
+    </div>
+    <div class="col-md-3 col-sm-4 col-12 align-self-center">
+      <div class="d-flex justify-content-end chart-box">
+        <div class="d-flex row mx-1">
+          <h6 class="m-b-0 w-100"><small class="text-white">PURCHASE TOTAL</small></h6>
+          <div class="chart-text p-0 col-6">
+            <h4 class="m-t-0 text-white">$58,356</h4>
+          </div>
+          <div class="chart-text p-0 text-right col-6">
+            <h6 class="m-t-0 text-danger">$10,020</h6>
+          </div>
+          <div class="spark-chart col-12">
+            <div class="row">
+              <dx-sparkline class="sparkline first w-100"
+                            [dataSource]="purchaseTotal"
+                            argumentField="month"
+                            valueField="2011"
+                            type="spline"
+                            [lineWidth]="2"
+                            [size]="{height: 70}"
+                            lineColor="#B5004C"
+                            [showMinMax]="false"
+                            [showFirstLast]="false">
+              </dx-sparkline>
+              <dx-sparkline class="sparkline second w-100"
+                            [dataSource]="purchaseTotal"
+                            argumentField="month"
+                            valueField="2012"
+                            type="spline"
+                            [lineWidth]="2"
+                            [size]="{height: 70}"
+                            lineColor="#24B5B5"
+                            [showMinMax]="false"
+                            [showFirstLast]="false">
+              </dx-sparkline>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-4 col-12 align-self-center">
+      <div class="d-flex justify-content-end chart-box">
+        <div class="d-flex row mx-1">
+          <h6 class="m-b-0 w-100"><small class="text-white">PURCHASE TOTAL</small></h6>
+          <div class="chart-text p-0 col-6">
+            <h4 class="m-t-0 text-white">$58,356</h4>
+          </div>
+          <div class="chart-text p-0 text-right col-6">
+            <h6 class="m-t-0 text-danger">$10,020</h6>
+          </div>
+          <div class="spark-chart col-12">
+            <div class="row">
+              <dx-sparkline class="sparkline first w-100"
+                            [dataSource]="purchaseTotal"
+                            argumentField="month"
+                            valueField="2011"
+                            type="spline"
+                            [lineWidth]="2"
+                            [size]="{height: 70}"
+                            lineColor="#B5004C"
+                            [showMinMax]="false"
+                            [showFirstLast]="false">
+              </dx-sparkline>
+              <dx-sparkline class="sparkline second w-100"
+                            [dataSource]="purchaseTotal"
+                            argumentField="month"
+                            valueField="2012"
+                            type="spline"
+                            [lineWidth]="2"
+                            [size]="{height: 70}"
+                            lineColor="#24B5B5"
+                            [showMinMax]="false"
+                            [showFirstLast]="false">
+              </dx-sparkline>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-4 col-12 align-self-center">
+      <div class="d-flex justify-content-end chart-box">
+        <div class="d-flex row mx-1">
+          <h6 class="m-b-0 w-100"><small class="text-white">PURCHASE TOTAL</small></h6>
+          <div class="chart-text p-0 col-6">
+            <h4 class="m-t-0 text-white">$58,356</h4>
+          </div>
+          <div class="chart-text p-0 text-right col-6">
+            <h6 class="m-t-0 text-danger">$10,020</h6>
+          </div>
+          <div class="spark-chart col-12">
+            <div class="row">
+              <dx-sparkline class="sparkline second w-100"
+                            [dataSource]="purchaseTotal"
+                            argumentField="month"
+                            valueField="2012"
+                            type="bar"
+                            [lineWidth]="2"
+                            [size]="{height: 70}"
+                            barPositiveColor="#e55253"
+                            firstLastColor="#ebdd8f"
+                            [showMinMax]="false"
+                            [showFirstLast]="false">
+              </dx-sparkline>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

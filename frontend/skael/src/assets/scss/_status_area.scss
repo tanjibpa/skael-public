@@ -1,0 +1,15 @@
+.status-section {
+  background-color: $blue;
+  .sparkline {
+    h4 {
+      color: white;
+    }
+    &.first {
+      position: absolute;
+    }
+  }
+  .chart-box {
+    max-width: 270px;
+    margin: auto;
+  }
+}

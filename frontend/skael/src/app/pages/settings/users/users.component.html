@@ -1,0 +1,16 @@
+<md-card-title class="px-lg-5 pt-lg-5">
+  Users
+  <button color="primary" class="pull-right" md-raised-button (click)="onAddNewUser()">Add User</button>
+</md-card-title>
+<md-card-content class="px-lg-5 user-list-container">
+  <md-list>
+      <md-list-item class="user-list-item" *ngFor="let user of users">
+        <h4 md-line>First Last <small class="user-email">first.last@company.com</small></h4>
+        <div class="btn-group">
+          <button md-button color="primary">Edit</button>
+          <button md-button color="primary">Remove</button>
+        </div>
+        <small class="user-role" md-line>Adminstrator</small>
+      </md-list-item>
+  </md-list>
+</md-card-content>

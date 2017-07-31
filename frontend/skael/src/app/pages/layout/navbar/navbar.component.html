@@ -1,0 +1,32 @@
+<nav class="navbar navbar-toggleable-sm navbar-light bg-faded sticky-top py-lg-3 px-lg-5">
+  <a class="navbar-brand" routerLink="/"><img src="assets/images/logo-pilot.png"></a>
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <md-icon>menu</md-icon>
+  </button>
+  <!--MAIN NAV ITEMS-->
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mt-2 mt-md-0">
+      <li class="nav-item pull-right">
+        <button md-menu-item routerLinkActive="active" routerLink="/analytics">Analytics</button>
+      </li>
+      <li class="nav-item pull-right">
+        <button md-menu-item routerLinkActive="active" routerLink="/advice">Advice</button>
+      </li>
+      <li class="nav-item pull-right">
+        <button md-menu-item routerLinkActive="active" routerLink="/settings">Settings</button>
+      </li>
+    </ul>
+    <!--PROFILE NAV MENU-->
+    <ul class="navbar-nav mt-2 ml-auto mt-md-0">
+      <li class="nav-item">
+        <button md-menu-item [mdMenuTriggerFor]="menu"><strong>CompanyName</strong> - <span>UserName<i class="fa fa-sort-desc ml-2" aria-hidden="true"></i></span></button>
+        <md-menu #menu="mdMenu" yPosition="below">
+          <button md-menu-item (click)="logout()">
+            <md-icon>exit_to_app</md-icon>
+            <span>Logout</span>
+          </button>
+        </md-menu>
+      </li>
+    </ul>
+  </div>
+</nav>

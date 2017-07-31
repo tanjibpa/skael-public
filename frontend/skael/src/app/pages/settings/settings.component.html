@@ -1,0 +1,19 @@
+<div class="container pt-5">
+  <h1 class="mt-2 mb-3">Settings</h1>
+  <div class="row">
+    <div class="col-3 col-md-3 col-lg-3">
+      <md-list>
+        <md-list-item><button md-menu-item routerLink="profile" routerLinkActive="active">Profile</button></md-list-item>
+        <md-list-item><button md-menu-item>Notifications</button></md-list-item>
+        <md-list-item><button md-menu-item>Organiztion</button></md-list-item>
+        <md-list-item><button md-menu-item>Integrations</button></md-list-item>
+        <md-list-item><button md-menu-item routerLink="users" routerLinkActive="active">Users</button></md-list-item>
+      </md-list>
+    </div>
+    <div class="col py-3">
+      <md-card>
+        <router-outlet></router-outlet>
+      </md-card>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+version: '2'
+
+services:
+  # If you need to access the DB locally. Could be a security risk to expose DB.
+  #postgres:
+  #  ports:
+  #    - "5432:5432"
+  migrations:
+    volumes:
+      - ./database:/database
+  backend:
+    command: /venv/bin/flask run --host=0.0.0.0
+    volumes:
+      - ./backend/skael:/backend
+    #ports:
+    #  - "5000:5000"
+  frontend:
+    image: node:8-alpine
+    command: /bin/sh -c 'cd /frontend && yarn install && yarn run ng -- serve --host 0.0.0.0 --proxy-config proxy.conf.json'
+    working_dir: /frontend
+    ports:
+      - "4200:4200" # Not a security risk due to check on host header
+    volumes:
+      - ./frontend/skael:/frontend
+    depends_on:
+      - backend

@@ -1,0 +1,42 @@
+<md-card class="sidebar-filter-container ml-lg-5 ml-md-2">
+  <md-card-title>Compare</md-card-title>
+  <md-card-subtitle>Presets</md-card-subtitle>
+  <md-card-content>
+    <section>
+      <md-select class="filter-element" placeholder="Custom" name="food">
+        <md-option value="0">Basic</md-option>
+        <md-option value="1">Normal</md-option>
+        <md-option value="2">Professional</md-option>
+      </md-select>
+      <button color="primary" class="filter-element" md-button><md-icon>add</md-icon>Save current settings</button>
+    </section>
+  </md-card-content>
+  <md-card-subtitle class="mb-4">Verticals</md-card-subtitle>
+  <md-card-content class="mb-4">
+    <section>
+      <md-checkbox class="filter-element">HealthCare</md-checkbox>
+      <md-checkbox class="filter-element">Finance</md-checkbox>
+      <md-checkbox class="filter-element">Hospitality</md-checkbox>
+      <md-checkbox class="filter-element">Education</md-checkbox>
+    </section>
+  </md-card-content>
+  <md-card-subtitle class="mb-4">Company Size</md-card-subtitle>
+  <md-card-content class="mb-4">
+    <section>
+      <p>MarketCap</p>
+      <md-slider class="filter-element"></md-slider>
+    </section>
+    <section>
+      <p>Number of Employees</p>
+      <md-slider class="filter-element"></md-slider>
+    </section>
+  </md-card-content>
+  <md-card-subtitle>Regions</md-card-subtitle>
+  <md-card-content>
+    <section>
+      <md-input-container class="filter-element">
+        <textarea mdInput placeholder="All regions"></textarea>
+      </md-input-container>
+    </section>
+  </md-card-content>
+</md-card>

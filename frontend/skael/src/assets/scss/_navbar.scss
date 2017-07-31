@@ -1,0 +1,26 @@
+.navbar {
+  background-color: $dark-blue;
+  .navbar-brand {
+    img {
+      width: 110px;
+    }
+  }
+  ul {
+    li {
+      color: $white;
+    }
+  }
+  .mat-menu-item {
+    color: white;
+  }
+  button.active {
+    font-weight: bold;
+  }
+  .navbar-toggler {
+    border-color: $light-gray !important;
+    color: $light-gray !important;
+  }
+  .nav-item {
+    cursor: pointer;
+  }
+}

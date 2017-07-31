@@ -1,0 +1,29 @@
+<h4 md-dialog-title>Invite New User</h4>
+<md-dialog-content class="dialog-content">
+  <form>
+    <div class="row">
+      <md-input-container class="col">
+        <input mdInput placeholder="First Name">
+      </md-input-container>
+      <md-input-container class="col">
+        <input mdInput placeholder="Last Name">
+      </md-input-container>
+    </div>
+    <div class="row">
+      <md-input-container class="col">
+        <input mdInput placeholder="Email Address" type="email">
+      </md-input-container>
+    </div>
+    <div class="row mt-3">
+      <md-select placeholder="User Role" class="col-6">
+        <md-option value="0">Basic</md-option>
+        <md-option value="1">Administrator</md-option>
+        <md-option value="2">Organizer</md-option>
+      </md-select>
+    </div>
+  </form>
+</md-dialog-content>
+<md-dialog-actions class="flex-row-reverse">
+  <button class="ml-1" md-raised-button color="primary" [md-dialog-close]="true">Invite</button>
+  <button class="ml-1" md-button md-dialog-close>Cancel</button>
+</md-dialog-actions>

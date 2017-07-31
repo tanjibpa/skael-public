@@ -1,0 +1,31 @@
+.page-titles {
+  background-color: $blue;
+  border-bottom: 1px solid $border-blue;
+  .breadcrumb {
+    background-color: transparent;
+    margin-bottom: 0;
+    a, li {
+      color: white;
+      font-size: 20px;
+      &.active {
+        font-weight: bold;
+      }
+    }
+    .breadcrumb-item + .breadcrumb-item::before {
+      content: ">";
+      color: rgba(255, 255, 255, 0.69);
+    }
+  }
+  .border-btn-group {
+    button {
+      background-color: transparent;
+      color: white;
+      &:hover {
+        background-color: transparent;
+      }
+      @include media-breakpoint-down(sm) {
+        font-size: 13px;
+      }
+    }
+  }
+}

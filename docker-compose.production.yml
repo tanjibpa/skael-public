@@ -1,0 +1,7 @@
+version: '2'
+
+services:
+  frontend_prod:
+    build: frontend
+    depends_on:
+      - backend

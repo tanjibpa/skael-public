@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+  postgres:
+    image: postgres:9.6-alpine
+    volumes:
+      - skael-database:/var/lib/postgresql/data
+  migrations:
+    build: database
+    depends_on:
+      - postgres
+  backend:
+    build: backend
+    depends_on:
+      - migrations
+
+volumes:
+  skael-database:
