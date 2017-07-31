@@ -29,9 +29,9 @@ services:
 
   angular:
     build: frontend
-
     working_dir: /skael
     command: "ng serve --host 0.0.0.0 --port 80"
 
     volumes:
       - ./frontend/skael:/skael
+      - ./frontend/skael/node_modules:/node_modules

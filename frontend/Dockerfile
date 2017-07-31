@@ -38,11 +38,12 @@ RUN apt-get update \
 # frontend app build
 
 WORKDIR /skael
-ADD skael/package.json .
+ADD skael/ /skael
+# ADD skael/package.json .
 RUN npm install
 ENV PATH="/skael/node_modules/.bin:${PATH}"
 
-ADD skael/ /skael
+RUN ls /skael/node_modules
 RUN ng build --target=production --environment=prod
 
 # nginx configuration
